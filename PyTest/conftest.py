@@ -1,9 +1,11 @@
 import pytest
 
 
-@pytest.fixture(name='')
+@pytest.fixture(autouse=True)
 def login():
-    print("\n这是个登陆方法")
+    print("\n先执行登录操作")
+    yield
+    print("执行登出操作")
 
 
 def pytest_configure(config):
