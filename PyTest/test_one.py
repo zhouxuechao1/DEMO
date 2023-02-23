@@ -28,7 +28,7 @@ class TestDay:
     #
     # def teardown(self):
     #     print("每次用例结束执行teardown")
-    @pytest.fixture(name=login)
+    @pytest.fixture(name='test_one')
     def test_name(self):
         print("指定test_one方法调用")
 
